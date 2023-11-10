@@ -58,6 +58,7 @@
   }
   
   .nav:hover {
+    color: #ffffff;
     border-bottom: 3px solid #C7613D;
     padding-bottom: 10px;
   }

@@ -39,7 +39,17 @@ h2 {
   flex-direction: column;
 }
 
-.sisalto {
+a {
+  text-decoration: none;
+  color: #C7613D;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #4DAAB3;
+}
+
+.section {
   display: flex;
   flex-direction: column;
   align-items: center;

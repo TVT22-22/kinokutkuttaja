@@ -1,0 +1,66 @@
+.runko_main {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.runko_row {
+    flex-direction: row;
+}
+
+.runko_column {
+    flex-direction: column;
+}
+
+.paakuva img {
+    height: 600px;
+    width: auto;
+}
+
+.tiedot {
+    font-family: 'Nunito', Helvetica;
+    font-size: 14px;
+    font-weight: 300;
+    color: #ffffff;
+    line-height: 1.2;
+}
+
+.tiedot h1 {
+    font-family: 'Nunito', Helvetica;
+    font-size: 23px;
+    font-weight: 600;
+    color: #ffffff;
+    text-align: center;
+}
+
+/* Buttonit */
+.button {
+    width: 150px;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 12px;
+    text-decoration: none;
+    text-align: center;
+    transition: 0.3s ease;
+}
+
+.sininen {
+    background-color: #4DAAB3;
+    border: none;
+}
+
+.oranssi {
+    background-color: #C7613D;
+    border: none;
+}
+
+.ontto {
+    border: 1px solid #4DAAB3;
+    background-color: none;
+}
+
+.button:hover {
+    opacity: 0.6;
+}

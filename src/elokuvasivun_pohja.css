@@ -1,24 +1,78 @@
-.runko_main {
+.row {
     width: 80%;
     display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.runko_row {
     flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
 }
 
-.runko_column {
+.tiedot_runko {
+    width: 100%;
+    display: flex;
     flex-direction: column;
 }
 
-.paakuva img {
-    height: 600px;
+.vasenkuva {
+    float: left;
+    width: auto;
+    margin-right: 8%;
+}
+.vasenkuva img {
+    height: 400px;
     width: auto;
 }
 
-.tiedot {
+.runko_osa1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 5px;
+}
+
+.runko_osa2 {
+    float: left;
+    display: flex;
+    flex-direction: column;
+}
+
+.otsikko {
+    float: left;
+}
+
+.tahdet {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    float: right;
+}
+
+.tahdet img {
+    height: 25px;
+    margin-right: 10px;
+}
+
+.lisatiedot {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-family: 'Nunito', Helvetica;
+    font-size: 16px;
+    font-weight: 400;
+    color: #ffffff;
+    text-align: left;
+}
+
+.osa1 {
+    margin-top: -10px;
+    justify-content: center;
+}
+
+.lisatiedot_osa {
+    float: left;
+    margin-right: 10px;
+}
+
+p {
     font-family: 'Nunito', Helvetica;
     font-size: 14px;
     font-weight: 300;
@@ -26,24 +80,36 @@
     line-height: 1.2;
 }
 
-.tiedot h1 {
+h1 {
     font-family: 'Nunito', Helvetica;
     font-size: 23px;
     font-weight: 600;
     color: #ffffff;
-    text-align: center;
+    text-align: left;
+}
+
+h2 {
+    font-family: 'Nunito', Helvetica;
+    font-size: 16px;
+    font-weight: 400;
+    color: #ffffff;
+    text-align: left;
+    margin-top: -10px;
 }
 
 /* Buttonit */
-.button {
-    width: 150px;
+button {
+    width: auto;
     color: white;
-    padding: 10px;
+    padding: 5px 15px;
     cursor: pointer;
     font-size: 12px;
     text-decoration: none;
     text-align: center;
     transition: 0.3s ease;
+    
+    border-radius: 25px;
+    margin: 20px 10px 20px 0px;
 }
 
 .sininen {
@@ -58,9 +124,9 @@
 
 .ontto {
     border: 1px solid #4DAAB3;
-    background-color: none;
+    background-color: transparent;
 }
 
-.button:hover {
+button:hover {
     opacity: 0.6;
 }

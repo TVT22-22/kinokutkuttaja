@@ -1,29 +1,17 @@
-import './App.css';
-import Ajankohtaista from './ajankohtaista';
-import Footer from './footer';
-import Header from './header';
-import Kollaasi from './kollaasi';
-import Elokuvat_etusivulla from './oletko-jo-tutustunut-naihin';
+import React from "react";
+import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
+import Moviepage from "./Elokuvasivu";
+import Etusivu from "./etusivu";
 
-function App() {
-  return (
-    <div className='start'>
-    <Header />
-
-    <div className='section'>
-      <h1>Ajankohtaista juuri nyt</h1>
-      <Ajankohtaista />
-    </div>
-
-    <div className='section'>
-      <h1>Oletko jo tutustunut näihin?</h1>
-      <p>filtterit tähän? ulkonäöllisesti, toimintaehdotukset koodissa</p>
-      <Elokuvat_etusivulla />
-    </div>
-    <Kollaasi />
-    <Footer />
-    </div>
-  );
-}
+const App = () => {
+    return (
+        <Router>
+            <Routes>
+                <Route path="/etusivu" element={<Etusivu/>} />
+                <Route path="/moviepage" element={<Moviepage/>} />
+            </Routes>
+        </Router>
+    );
+};
 
 export default App;

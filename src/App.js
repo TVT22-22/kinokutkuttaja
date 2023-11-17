@@ -1,17 +1,25 @@
 import React from "react";
-import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Moviepage from "./Elokuvasivu";
 import Etusivu from "./etusivu";
+import Footer from "./footer";
+import Header from "./header";
 
-const App = () => {
+function App() {
     return (
-        <Router>
-            <Routes>
-                <Route path="/etusivu" element={<Etusivu/>} />
-                <Route path="/moviepage" element={<Moviepage/>} />
-            </Routes>
-        </Router>
+        <BrowserRouter>
+        <div className='start'>
+        <Header />
+
+        <Routes>
+            <Route path="/" element={<Etusivu/>} />
+            <Route path="/moviepage" element={<Moviepage/>} />
+        </Routes>
+
+        <Footer />
+        </div>
+        </BrowserRouter>
     );
-};
+}
 
 export default App;

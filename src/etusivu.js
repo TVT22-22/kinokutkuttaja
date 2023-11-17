@@ -1,16 +1,12 @@
 import React from 'react';
 import './App.css';
 import Ajankohtaista from './ajankohtaista';
-import Footer from './footer';
-import Header from './header';
 import Kollaasi from './kollaasi';
 import Elokuvat_etusivulla from './oletko-jo-tutustunut-naihin';
 
 function Etusivu() {
   return (
-    <div className='start'>
-    <Header />
-
+    <>
     <div className='section'>
       <h1>Ajankohtaista juuri nyt</h1>
       <Ajankohtaista />
@@ -22,8 +18,7 @@ function Etusivu() {
       <Elokuvat_etusivulla />
     </div>
     <Kollaasi />
-    <Footer />
-    </div>
+    </>
   );
 }
 

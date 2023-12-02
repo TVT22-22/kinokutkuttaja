@@ -1,13 +1,24 @@
 import './App.css';
 import './monikkotyylit.css';
+import isAuthenticated from './isAuthenticated';
 
 const Yhteiso = () => {
+
+    const handleCreateCommunity =() => {
+
+        if (isAuthenticated()) {
+            window.location.href = '/yhteiso_uusiyhteiso';
+          } else {
+            window.location.href = '/kirjaudurekisteroidy';
+          }
+        };
+
     return (
         <>
             <div className='section'>
                 <h1>Yhteisö</h1>
                 <p className="esittelytxt">Yhteisössä voit keskustella toisten samanhenkisten ihmisten kanssa, jakaa uutisia ja kuulua joukkoon. Yhteisöt ovat suljettuja. Päästäksesi mukaan sinun täytyy tehdä liittymispyyntö keskustelun aloittajalle.</p>
-                <a href="yhteiso_uusiyhteiso"><button className='yleinen_btn levea sininen'>+ Lisää uusi yhteisö</button></a>
+                <button className='yleinen_btn levea sininen' onClick={handleCreateCommunity}>+ Lisää uusi yhteisö</button>
                 <p>* Jos ei kirjautunut sisään, ohjaa suoraan sille sivulle nappia painettaessa*</p>
             </div>
             <div className='section'>

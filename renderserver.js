@@ -3,7 +3,7 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const { Pool } = require('pg');
 const jwt = require('jsonwebtoken');
-const salausavain = 'salausavain';
+const salausavain = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmljayI6ImFkbWluIiwiaWF0IjoxNzAxNTM3ODA5LCJleHAiOjE3MDE1NDE0MDl9._Wv5bsGC91rKvOeyNG3KY4YO7dqT6vs-SZj_TTHtGqs';
 
 const app = express();
 const port = 5000;

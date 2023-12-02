@@ -28,18 +28,29 @@ const Kirjaudu = () => {
 
     const handleLogin = async () => {
         try {
-          const response = await axios.post('http://localhost:5000/login', { usernick, password });
-    
-          if (response.data.success) {
-            localStorage.setItem('token', response.data.token); // Tallentaa tokenin local storageen
-            console.log('Kirjautuminen onnistui');
-          } else {
-            console.error('Kirjautuminen epäonnistui:', response.data.message);
-          }
-        } catch (error) {
-          console.error('Error during login:', error.message);
+            const response = await axios.post('http://localhost:5000/login', { usernick, password });
+
+            if (response.data.success) {
+                localStorage.setItem('token', response.data.token); // Tallentaa tokenin local storageen
+                console.log('Kirjautuminen onnistui');
+                console.log('Token:', response.data.token);
+
+            } else {
+                console.error('Kirjautuminen epäonnistui:', response.data.message);
+            }
+            
+        } catch (error) {   // Error viestit
+            console.error('Error during login:', error);
+            if (error.response) {
+                console.error('Response status:', error.response.status);
+                console.error('Response data:', error.response.data);
+            } else if (error.request) {
+                console.error('No response received:', error.request);
+            } else {
+                console.error('Other error occurred:', error.message);
+            }
         }
-      };
+    };
 
     return (
         <>
@@ -52,7 +63,7 @@ const Kirjaudu = () => {
             <div className='luettelo kirjoitusalueet'>
                 <div className='luettelo_osa leveys20'><h3>Salasana:</h3></div>
                 <div className='luettelo_osa leveys80'>
-                    <input className='tekstialue tekstialue_leveys90' placeholder='****'type="password" value={password} onChange={(e) => setPassword(e.target.value)}></input>
+                    <input className='tekstialue tekstialue_leveys90' placeholder='****' type="password" value={password} onChange={(e) => setPassword(e.target.value)}></input>
                 </div>
             </div>
             <button className='yleinen_btn levea sininen' onClick={handleLogin}>Kirjaudu sisään</button>

@@ -1,6 +1,6 @@
 
 //API avain täytyy salata
-const apiKey = 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIzMTI5MjQ1MGRjMDAzNTEwMjMzZWY3NDVmOWJkNWFhMiIsInN1YiI6IjY1NDhkMzI2ZDhjYzRhMDBlM2NjOTJkZCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.pinVZ6Vu_Dy5u-YOpXG60nUsEssui8GV8TpBwEozhdE';
+const apiKey = 'APIKEY';
 
 const BaseUrl = 'https://api.themoviedb.org/3';
 const options = {   //Perus asetukset, voi lisätä/poistaa tarvittavia
